@@ -63,3 +63,7 @@
 .home-content:hover{
     box-shadow: 4px 4px 6px black;
 }
+
+.page-name{
+    margin: 30px 30px;
+}
