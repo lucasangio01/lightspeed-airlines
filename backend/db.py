@@ -1,9 +1,13 @@
 import sqlite3
+from dotenv import load_dotenv
+import os
 
 
 class DatabaseConnection:
     def __init__(self, table_name):
-        self.connection = sqlite3.connect("backend/sqldb.db")
+        load_dotenv()
+        db_name = os.environ.get("DB_NAME")
+        self.connection = sqlite3.connect(db_name)
         self.cur = self.connection.cursor()
         self.table_name = table_name
 
@@ -32,10 +36,10 @@ class DatabaseConnection:
 
 
 def user_interaction():
+    user_intention = input("What do you want to do?\n")
+    supported_options = ["CREATE_TABLE", "ADD_RECORD", "FETCH_RECORD"]
     chosen_table = input("Which table do you want to work on?\n")
     db = DatabaseConnection(table_name = chosen_table)
-    supported_options = ["CREATE_TABLE", "ADD_RECORD", "FETCH_RECORD"]
-    user_intention = input("What do you want to do?\n")
     if user_intention not in supported_options:
         raise KeyError
     if user_intention == supported_options[0]:
