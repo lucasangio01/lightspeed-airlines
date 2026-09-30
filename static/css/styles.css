@@ -34,7 +34,7 @@
 .menu-button{
     background-color: whitesmoke;
     border-radius: 5px;
-    padding: 5px 50px;
+    padding: 10px 50px;
     text-align: center;
     display: block;
     width: 100%;
@@ -46,9 +46,8 @@
 .menu-button:hover{
     background-color: lightgray;
     border: solid white;
-    transform: scale(1.01);
     text-align: center;
-    transition: transform 3s border 1s;
+    transition: border 1s;
 }
 
 .menu-button-li{
@@ -92,7 +91,7 @@
 .fleet-background{
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: auto auto auto;
     align-items: start;
 }
 
@@ -131,6 +130,7 @@
     text-align: center;
     margin-left: 25px;
     margin-right: 12.5px;
+    margin-bottom: 25px;
 }
 
 #spaceship-2-2{
@@ -143,6 +143,7 @@
     text-align: center;
     margin-right: 25px;
     margin-left: 12.5px;
+    margin-bottom: 25px;
 }
 
 .spaceship-img{
@@ -208,17 +209,7 @@
 
 .destinations-background{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr
-}
-
-.destination-single-block1{
-    display: grid;
-    grid-row: 1;
-    grid-template-rows: auto auto auto;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 60px;
-    border: solid darkgray 1px;
+    grid-template-rows: auto auto auto auto auto;
 }
 
 .destination-planet-header{
@@ -298,11 +289,21 @@
     border-top: solid 1px darkgray;
 }
 
-.destination-single-block1:hover{
+#destination-single-block1{
+    display: grid;
+    grid-row: 1;
+    grid-template-rows: auto auto auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    border: solid darkgray 1px;
+}
+
+#destination-single-block1:hover{
     box-shadow: 4px 4px 6px black;
 }
 
-.destination-single-block2{
+#destination-single-block2{
     display: grid;
     grid-row: 2;
     grid-template-rows: auto auto auto;
@@ -312,6 +313,62 @@
     border: solid darkgray 1px;
 }
 
-.destination-single-block2:hover{
+#destination-single-block2:hover{
+    box-shadow: 4px 4px 6px black;
+}
+
+#destination-single-block3{
+    display: grid;
+    grid-row: 3;
+    grid-template-rows: auto auto auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    border: solid darkgray 1px;
+}
+
+#destination-single-block3:hover{
+    box-shadow: 4px 4px 6px black;
+}
+
+#destination-single-block4{
+    display: grid;
+    grid-row: 4;
+    grid-template-rows: auto auto auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    border: solid darkgray 1px;
+}
+
+#destination-single-block4:hover{
+    box-shadow: 4px 4px 6px black;
+}
+
+#destination-single-block5{
+    display: grid;
+    grid-row: 5;
+    grid-template-rows: auto auto auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    border: solid darkgray 1px;
+}
+
+#destination-single-block5:hover{
+    box-shadow: 4px 4px 6px black;
+}
+
+#destination-single-block6{
+    display: grid;
+    grid-row: 6;
+    grid-template-rows: auto auto auto;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    border: solid darkgray 1px;
+}
+
+#destination-single-block6:hover{
     box-shadow: 4px 4px 6px black;
 }
