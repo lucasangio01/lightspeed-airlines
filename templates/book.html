@@ -19,21 +19,60 @@
     </nav>
 
     <div class="main-content-background">
-        <h3 class="page-name">Book a trip</h4>
+        <h3 class="page-name">Book a trip</h3>
         <hr class="horizontal-line">
-        <div class="booking-main-form">
-            <section id="booking-departure-sec">
+        <form class="booking-main-form" action="./booking_confirmed.html" method="get">
+            <section class="booking-dep-arr-section" style="grid-column: 1">
                 <h3>Departure</h3>
-                <section id="booking-departure-blocks">
-                    <button class="booking-planet-box" style="grid-row: 1; grid-column: 1">Naboo</button>
-                    <button class="booking-planet-box" style="grid-row: 1; grid-column: 2">Coruscant</button>
-                    <button class="booking-planet-box" style="grid-row: 1; grid-column: 3">Tatooine</button>
-                    <button class="booking-planet-box" style="grid-row: 2; grid-column: 1">Kamino</button>
-                    <button class="booking-planet-box" style="grid-row: 2; grid-column: 2">Geonosis</button>
-                    <button class="booking-planet-box" style="grid-row: 2; grid-column: 3">Kashyyyk</button>
+                <section class="booking-dep-arr-blocks" style="grid-column: 1">
+                    <label class="booking-box" style="grid-row: 1; grid-column: 1"><input type="radio" name="departure" value="naboo" required><span class="booking-box-content"><img src="../static/img/destinations/naboo_planet.png" alt=""><span>Naboo</span></span></label>
+                    <label class="booking-box" style="grid-row: 1; grid-column: 2"><input type="radio" name="departure" value="coruscant" required><span class="booking-box-content"><img src="../static/img/destinations/coruscant_planet.png" alt=""><span>Coruscant</span></span></label>
+                    <label class="booking-box" style="grid-row: 1; grid-column: 3"><input type="radio" name="departure" value="tatooine" required><span class="booking-box-content"><img src="../static/img/destinations/tatooine_planet.png" alt=""><span>Tatooine</span></span></label>
+                    <label class="booking-box" style="grid-row: 2; grid-column: 1"><input type="radio" name="departure" value="kamino" required><span class="booking-box-content"><img src="../static/img/destinations/kamino_planet.png" alt=""><span>Kamino</span></span></label>
+                    <label class="booking-box" style="grid-row: 2; grid-column: 2"><input type="radio" name="departure" value="geonosis" required><span class="booking-box-content"><img src="../static/img/destinations/geonosis_planet.png" alt=""><span>Geonosis</span></span></label>
+                    <label class="booking-box" style="grid-row: 2; grid-column: 3"><input type="radio" name="departure" value="kashyyyk" required><span class="booking-box-content"><img src="../static/img/destinations/kashyyyk_planet.png" alt=""><span>Kashyyyk</span></span></label>
                 </section>
             </section>
-            <section id="booking-arrival-sec">
+            <section class="booking-dep-arr-section" style="grid-column: 2">
                 <h3>Arrival</h3>
+                <section class="booking-dep-arr-blocks" style="grid-column: 2">
+                    <label class="booking-box" style="grid-row: 1; grid-column: 1"><input type="radio" name="arrival" value="naboo" required><span class="booking-box-content"><img src="../static/img/destinations/naboo_planet.png" alt=""><span>Naboo</span></span></label>
+                    <label class="booking-box" style="grid-row: 1; grid-column: 2"><input type="radio" name="arrival" value="coruscant" required><span class="booking-box-content"><img src="../static/img/destinations/coruscant_planet.png" alt=""><span>Coruscant</span></span></label>
+                    <label class="booking-box" style="grid-row: 1; grid-column: 3"><input type="radio" name="arrival" value="tatooine" required><span class="booking-box-content"><img src="../static/img/destinations/tatooine_planet.png" alt=""><span>Tatooine</span></span></label>
+                    <label class="booking-box" style="grid-row: 2; grid-column: 1"><input type="radio" name="arrival" value="kamino" required><span class="booking-box-content"><img src="../static/img/destinations/kamino_planet.png" alt=""><span>Kamino</span></span></label>
+                    <label class="booking-box" style="grid-row: 2; grid-column: 2"><input type="radio" name="arrival" value="geonosis" required><span class="booking-box-content"><img src="../static/img/destinations/geonosis_planet.png" alt=""><span>Geonosis</span></span></label>
+                    <label class="booking-box" style="grid-row: 2; grid-column: 3"><input type="radio" name="arrival" value="kashyyyk" required><span class="booking-box-content"><img src="../static/img/destinations/kashyyyk_planet.png" alt=""><span>Kashyyyk</span></span></label>
+                </section>
             </section>
-        </div>
+            
+            <section id="booking-ship-selection">
+                <h3>Ship</h3>
+                <section class="booking-dep-arr-blocks" style="grid-column: 1">
+                    <label class="booking-box" style="grid-row: 1; grid-column: 1"><input type="radio" name="ship" value="gunship" required><span class="booking-box-content"><img src="../static/img/ships/gunship.jpg" alt=""><span>Gunship</span></span></label>
+                    <label class="booking-box" style="grid-row: 1; grid-column: 2"><input type="radio" name="ship" value="yacht" required><span class="booking-box-content"><img src="../static/img/ships/yacht.jpg" alt=""><span>Yacht</span></span></label>
+                    <label class="booking-box" style="grid-row: 1; grid-column: 3"><input type="radio" name="ship" value="imperial-shuttle" required><span class="booking-box-content"><img src="../static/img/ships/imperialshuttle.jpg" alt=""><span>Imperial Shuttle</span></span></label>
+                    <label class="booking-box" style="grid-row: 1; grid-column: 4"><input type="radio" name="ship" value="zeta-class-shuttle" required><span class="booking-box-content"><img src="../static/img/ships/zetaclassshuttle.jpg" alt=""><span>Zeta Class Shuttle</span></span></label>
+                </section>
+            </section>
+
+            <section id="booking-passengers-selection">
+                <h3>Passengers</h3>
+                <section>
+                    <input type="number" id="booking-passengers-input" name="passengers" min="1" max="10" required>
+                </section>
+            </section>
+
+            <section id="booking-date-selection">
+                <h3>Date</h3>
+                <section>
+                    <input type="date" id="booking-date-input" name="date" required>
+                </section>
+            </section>
+
+            <button id="booking-submit-button" type="submit">
+                Submit
+            </button>
+
+        </form>
+    </div>
+</body>
