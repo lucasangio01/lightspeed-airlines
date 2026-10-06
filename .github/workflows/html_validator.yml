@@ -7,6 +7,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: validate
-        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        uses: chabad360/htmlproofer@master
         with:
-          root: templates/
+          directory: ./templates
